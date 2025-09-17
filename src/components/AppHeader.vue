@@ -1,37 +1,85 @@
 <template>
-  <header class="bg-white shadow-sm fixed-top">
-    <div class="container d-flex align-items-center justify-content-between py-3">
-      <div class="d-flex align-items-center">
-        <img :src="logo" alt="Logo CEDIT" class="me-2 rounded" style="width: 48px;" />
-        <h1 class="h5 mb-0 text-success fw-bold">CEDIT</h1>
+  <header :class="{ 'header-shrink': isShrunk }">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#home">
+          <img :src="logo" alt="Logo CEDIT" class="me-2 rounded-circle" style="width: 40px" />
+          <span class="brand-title">CEDIT</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+          <ul class="navbar-nav">
+            <li class="nav-item" v-for="link in links" :key="link.href">
+              <a class="nav-link" :href="link.href">{{ link.label }}</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a href="#contact" class="btn btn-gold rounded-pill shadow-sm">Contatti</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <nav>
-        <ul class="nav">
-          <li class="nav-item"><a class="nav-link text-success" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-success" href="#about">Chi Siamo</a></li>
-          <li class="nav-item"><a class="nav-link text-success" href="#services">Servizi</a></li>
-          <li class="nav-item"><a class="nav-link text-success" href="#contact">Contatti</a></li>
-        </ul>
-      </nav>
-    </div>
+    </nav>
   </header>
 </template>
 
 <script>
 import logo from '../assets/cedit-logo.png';
+
 export default {
+  name: 'AppHeader',
   data() {
-    return { logo };
+    return {
+      logo,
+      isShrunk: false,
+      links: [
+        { label: 'Home', href: '#home' },
+        { label: 'Chi Siamo', href: '#about' },
+        { label: 'Servizi', href: '#services' },
+        
+      ]
+    };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      this.isShrunk = window.scrollY > 50;
+    }
   }
 };
 </script>
 
 <style scoped>
+.brand-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #156845;
+}
 .nav-link {
-  transition: color 0.3s;
   font-weight: 500;
+  transition: color 0.2s;
 }
 .nav-link:hover {
-  color: #0d6efd;
+  color: #156845;
+}
+.btn-gold {
+  background-color: #ffc857;
+  border: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.btn-gold:hover {
+  background-color: #e6b84d;
+  transform: scale(1.05);
+}
+.header-shrink .navbar {
+  padding-top: 0.3rem !important;
+  padding-bottom: 0.3rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 </style>
