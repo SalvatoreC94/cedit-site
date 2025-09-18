@@ -1,4 +1,4 @@
-<template>
+<<template>
   <main>
     <!-- Hero Section -->
     <section id="home" class="hero-section position-relative">
@@ -30,16 +30,16 @@
       <div class="container" data-aos="fade-up">
         <h2 class="text-green text-center mb-4">Chi Siamo</h2>
         <p class="text-center mb-4">
-  CEDIT è il centro di riferimento per la <strong>riabilitazione e fisioterapia </strong>.  
-  Da oltre 25 anni offriamo percorsi su misura per il recupero funzionale post-infortunio,
-  la riabilitazione post-operatoria e il trattamento del dolore muscolare e articolare.  
-  Il nostro team unisce competenza medica, tecniche moderne come <strong>tecarterapia</strong> e <strong>crioterapia</strong>,
-  e un approccio attento alla persona per accompagnarti passo dopo passo verso il pieno benessere.
-</p>
+          CEDIT è il centro di riferimento per la <strong>riabilitazione e fisioterapia </strong>.  
+          Da oltre 25 anni offriamo percorsi su misura per il recupero funzionale post-infortunio,
+          la riabilitazione post-operatoria e il trattamento del dolore muscolare e articolare.  
+          Il nostro team unisce competenza medica, tecniche moderne come <strong>tecarterapia</strong> e <strong>crioterapia</strong>,
+          e un approccio attento alla persona per accompagnarti passo dopo passo verso il pieno benessere.
+        </p>
         <div class="row g-4">
           <div v-for="(member, index) in staff" :key="index" class="col-12 col-sm-6 col-lg-3">
             <div class="card shadow-sm hover-card h-100">
-              <img :src="member.img" class="card-img-top rounded-top" :alt="member.name" />
+              <img :src="member.img" class="card-img-top rounded-top" :alt="member.name" loading="lazy" decoding="async" />
               <div class="card-body text-center">
                 <h5 class="card-title text-green">{{ member.name }}</h5>
                 <p class="small">{{ member.desc }}</p>
@@ -53,15 +53,13 @@
     <!-- Servizi -->
     <section id="services" class="py-5 bg-ivory">
       <div class="container" data-aos="fade-up">
-        <h2 class="text-green text-center mb-5">
-  I Nostri Servizi di Riabilitazione e Fisioterapia
-</h2>
-<p class="text-center mb-5">
-  Offriamo un’ampia gamma di trattamenti per il recupero del benessere fisico:
-  fisioterapia personalizzata, riabilitazione ortopedica ,
-  <strong>massoterapia</strong>, <strong>laserterapia ad alta intensità</strong>,
-  <strong>onde d'urto</strong> e <strong>crioterapia</strong>.
-</p>
+        <h2 class="text-green text-center mb-5">I Nostri Servizi di Riabilitazione e Fisioterapia</h2>
+        <p class="text-center mb-5">
+          Offriamo un’ampia gamma di trattamenti per il recupero del benessere fisico:
+          fisioterapia personalizzata, riabilitazione ortopedica ,
+          <strong>massoterapia</strong>, <strong>laserterapia ad alta intensità</strong>,
+          <strong>onde d'urto</strong> e <strong>crioterapia</strong>.
+        </p>
         <div class="row align-items-start gy-4">
           <div class="col-12 col-lg-6">
             <ul class="list-group list-group-flush">
@@ -77,7 +75,7 @@
             <div id="carouselServices" class="carousel slide shadow-sm rounded overflow-hidden" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item" :class="{ active: i === 0 }" v-for="(img, i) in immaginiServizi" :key="i">
-                  <img :src="img" class="d-block w-100 img-fluid" :alt="`Servizio ${i+1}`">
+                  <img :src="img" class="d-block w-100 img-fluid" :alt="`Servizio ${i+1}`" loading="lazy" decoding="async">
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselServices" data-bs-slide="prev">
@@ -103,7 +101,7 @@
             <div class="map-container mt-3 rounded shadow-sm" style="height: 200px;">
               <iframe class="w-100 h-100"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.4157244611492!2d14.587402!3d40.7748738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133bb96ca307521f%3A0x9ef2333b6cd487a6!2sCalenda%20Dr.%20Guido%20Cedit!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"
-                style="border:0;" allowfullscreen loading="lazy"></iframe>
+                style="border:0;" allowfullscreen loading="lazy" decoding="async"></iframe>
             </div>
           </div>
           <div class="col-12 col-md-6">
@@ -161,16 +159,17 @@
   </main>
 </template>
 
-<script>
-import illustrazioneCalenda from '../assets/illustrazione-calenda.png';
-import illustrazioneIrena from '../assets/illustrazione-irena.png';
-import illustrazioneFederica from '../assets/illustrazione-federica.png';
-import illustrazioneMarianna from '../assets/illustrazione-marianna.png';
 
-import servizio1 from '../assets/fisioterapia.png';
-import servizio2 from '../assets/crioterapia.png';
-import servizio3 from '../assets/tecarterapia.png';
-import servizio4 from '../assets/consulenza.png';
+<script>
+import illustrazioneCalenda from '../assets/illustrazione-calenda.webp';
+import illustrazioneIrena from '../assets/illustrazione-irena.webp';
+import illustrazioneFederica from '../assets/illustrazione-federica.webp';
+import illustrazioneMarianna from '../assets/illustrazione-marianna.webp';
+
+import servizio1 from '../assets/fisioterapia.webp';
+import servizio2 from '../assets/crioterapia.webp';
+import servizio3 from '../assets/tecarterapia.webp';
+import servizio4 from '../assets/consulenza.webp';
 
 export default {
   name: 'AppMain',
@@ -289,7 +288,7 @@ section {
   position: absolute;
   inset: 0;
   background: linear-gradient(rgba(21, 104, 69, 0.1), rgba(21, 104, 69, 0.1)),
-    url('../assets/herosection.png') center/cover no-repeat;
+    url('../assets/herosection.webp') center/cover no-repeat;
   z-index: 0;
 }
 
