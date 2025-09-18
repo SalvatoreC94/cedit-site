@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import logo from '../assets/cedit-logo.png';
+import logo from '../assets/cedit-logo.webp';
 
 export default {
   name: 'AppHeader',
