@@ -3,9 +3,8 @@
     <div class="container text-center">
       <p class="mb-2 fw-semibold">CEDIT - Centro di Diagnostica e Terapia</p>
       <div class="mb-3">
-        <a href="https://wa.me/390815187313" target="_blank" class="text-white me-3"><i class="bi bi-whatsapp"></i></a>
-        <a href="https://facebook.com" target="_blank" class="text-white me-3"><i class="bi bi-facebook"></i></a>
-        <a href="https://instagram.com" target="_blank" class="text-white"><i class="bi bi-instagram"></i></a>
+        
+        <a href="https://www.instagram.com/centro.cedit?igsh=MTVxZHc5ZzF5Ym1qMA==" target="_blank" class="text-white"><i class="bi bi-instagram"></i></a>
       </div>
       <p class="small mb-0">
         <a href="/privacy" class="text-white text-decoration-underline small">Privacy Policy</a> |
