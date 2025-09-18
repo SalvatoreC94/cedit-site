@@ -33,7 +33,7 @@
           CEDIT è il centro di riferimento per la <strong>riabilitazione e fisioterapia </strong>.  
           Da oltre 25 anni offriamo percorsi su misura per il recupero funzionale post-infortunio,
           la riabilitazione post-operatoria e il trattamento del dolore muscolare e articolare.  
-          Il nostro team unisce competenza medica, tecniche moderne come <strong>tecarterapia</strong> e <strong>crioterapia</strong>,
+          Il nostro team unisce competenza medica, tecniche moderne come <strong>tecarterapia</strong> ,
           e un approccio attento alla persona per accompagnarti passo dopo passo verso il pieno benessere.
         </p>
         <div class="row g-4">
@@ -58,7 +58,7 @@
           Offriamo un’ampia gamma di trattamenti per il recupero del benessere fisico:
           fisioterapia personalizzata, riabilitazione ortopedica ,
           <strong>massoterapia</strong>, <strong>laserterapia ad alta intensità</strong>,
-          <strong>onde d'urto</strong> e <strong>crioterapia</strong>.
+          <strong>onde d'urto.</strong> 
         </p>
         <div class="row align-items-start gy-4">
           <div class="col-12 col-lg-6">
@@ -210,7 +210,6 @@ export default {
         { name: 'Tecarterapia', icon: 'bi bi-lightning' },
         { name: 'Laserterapia ad alta intensità', icon: 'bi bi-sun' },
         { name: "Onde d'urto", icon: 'bi bi-broadcast-pin' },
-        { name: 'Crioterapia', icon: 'bi bi-snow' },
         { name: 'Consulenze Specialistiche', icon: 'bi bi-chat-dots' }
       ],
 
