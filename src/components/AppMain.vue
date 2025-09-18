@@ -177,14 +177,35 @@ export default {
   data() {
     return {
       staff: [
-        { name: 'Dott. Guido Calenda', desc: 'Fisiatra e Posturologo con oltre 30 anni di esperienza. Guida i pazienti in percorsi mirati di riabilitazione motoria, favorendo un recupero rapido e duraturo.', img: illustrazioneCalenda },
-        { name: 'Dott.ssa Irena Yaroshovych', desc: 'Medico specializzato in riabilitazione funzionale e rieducazione posturale. Progetta percorsi personalizzati e applica tecniche avanzate per accompagnare ogni paziente verso il recupero ottimale.', img: illustrazioneIrena },
-        { name: 'Dott.ssa Federica Gaeta', desc: 'Fisioterapista specializzata in riabilitazione. Supporta i pazienti con programmi su misura per recuperare forza e movimento in sicurezza.', img: illustrazioneFederica },
-        { name: 'Marianna Guarino', desc: 'Punto di riferimento all’ingresso del centro. Gestisce accoglienza e prenotazioni creando un’esperienza serena e ordinata per ogni paziente.', img: illustrazioneMarianna },
+        {
+          name: 'Dott. Guido Calenda',
+          desc:
+            'Fisiatra e Posturologo con oltre 30 anni di esperienza. Guida i pazienti in percorsi mirati di riabilitazione motoria, favorendo un recupero rapido e duraturo.',
+          img: illustrazioneCalenda
+        },
+        {
+          name: 'Dott.ssa Irena Yaroshovych',
+          desc:
+            'Medico specializzato in riabilitazione funzionale e rieducazione posturale. Progetta percorsi personalizzati e applica tecniche avanzate per un recupero completo.',
+          img: illustrazioneIrena
+        },
+        {
+          name: 'Dott.ssa Federica Gaeta',
+          desc:
+            'Fisioterapista specializzata in riabilitazione. Guida i pazienti con programmi su misura per recuperare forza e movimento in sicurezza.',
+          img: illustrazioneFederica
+        },
+        {
+          name: 'Marianna Guarino ',
+          desc:
+            'Punto di riferimento all’ingresso del centro: gestisce accoglienza e prenotazioni con precisione, garantendo un’esperienza serena e ordinata.',
+          img: illustrazioneMarianna
+        }
       ],
+
       servizi: [
         { name: 'Fisioterapia', icon: 'bi bi-heart-pulse' },
-        { name: 'Riabilitazione', icon: 'bi bi-person-arms-up' },
+        { name: 'Riabilitazione', icon: 'bi bi-person-check' }, // icona compatibile
         { name: 'Medicina Estetica', icon: 'bi bi-droplet' },
         { name: 'Massoterapia', icon: 'bi bi-hand-thumbs-up' },
         { name: 'Tecarterapia', icon: 'bi bi-lightning' },
@@ -193,11 +214,57 @@ export default {
         { name: 'Crioterapia', icon: 'bi bi-snow' },
         { name: 'Consulenze Specialistiche', icon: 'bi bi-chat-dots' }
       ],
+
       immaginiServizi: [servizio1, servizio2, servizio3, servizio4],
+
+      testimonials: [
+        {
+          text:
+            'Grazie al team CEDIT ho recuperato in poche settimane dopo un infortunio al ginocchio.',
+          author: 'Maria R.',
+          info: 'Paziente'
+        },
+        {
+          text:
+            'Professionalità e gentilezza: mi sono sentito seguito passo dopo passo.',
+          author: 'Luca P.',
+          info: 'Paziente'
+        },
+        {
+          text:
+            'Struttura moderna e staff competente. Consigliatissimi!',
+          author: 'Giulia F.',
+          info: 'Paziente'
+        }
+      ],
+
+      faqs: [
+        {
+          question: 'Serve la prescrizione medica per iniziare la fisioterapia?',
+          answer:
+            'No, puoi iniziare subito. In caso di dubbi, il nostro staff medico saprà consigliarti il percorso più adatto.'
+        },
+        {
+          question: 'Quanto dura una seduta?',
+          answer:
+            'In media 20-50 minuti, in base al tipo di trattamento e alla fase del percorso riabilitativo.'
+        },
+        {
+          question: 'Posso prenotare telefonicamente?',
+          answer:
+            'Sì, certo. Chiama lo 081 5187313 ti aiutiamo a trovare l’orario migliore.'
+        },
+        {
+          question: 'Ci sono parcheggi disponibili?',
+          answer:
+            'Sì, è presente un parcheggio interno riservato ai pazienti del centro.'
+        }
+      ]
     };
   }
 };
 </script>
+
 
 
 <style scoped>
